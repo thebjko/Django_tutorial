@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+from decouple import config # pip install python-decouple; pip freeze>requirements.txt
+
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-0o86$xdrf8$s-awfq-((h^i8_nd1oey(00c$0$2h!=sd#^^q7u'
+SECRET_KEY = config("SECRET_KEY") # this is to replace the secret key you cut away before
+# or SECRET_KEY = os.environ.get('SECRET_KEY', 'meaninglessphrase?')
+# that way you set a different secret key on every environment you run it on,
+# and simply have a meaningless default value in your repo.
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
