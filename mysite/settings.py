@@ -37,7 +37,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'polls.apps.PollsConfig', # python manage.py makemigrations polls
+    'polls.apps.PollsConfig', # python manage.py makemigrations polls; python manage.py sqlmigrate polls 0001
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
