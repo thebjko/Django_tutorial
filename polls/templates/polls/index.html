@@ -5,13 +5,13 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Polls</title>
 </head>
 <body>
-  {% if latest_question_list %}
+  {% if LATEST_QUESTION_LIST %}
     <ul>
-      {% for question in latest_question_list %}
-        <li><a href="/polls/{{ question.id }}">{{ question.question_text }}</a></li>
+      {% for question in LATEST_QUESTION_LIST %}
+        <li><a href="{% url 'DETAIL' question.id %}">{{ question.question_text }}</a></li>
       {% endfor %}
     </ul>
   {% else %}
