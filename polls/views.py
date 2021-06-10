@@ -8,7 +8,7 @@ from .models import Question, Choice
 
 class IndexView(generic.ListView):
     template_name = 'polls/index.html'
-    context_object_name = 'LATEST_QUESTION_LIST'
+    context_object_name = 'LATEST_QUESTION_LIST'  # Designates the name of the variable to use in the context.
 
     def get_queryset(self):
         """Return the last five published questions."""
