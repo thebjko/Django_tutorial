@@ -1,3 +1,5 @@
+{% load static %}
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,6 +10,7 @@
   <title>Polls</title>
 </head>
 <body>
+<link rel="stylesheet" href="{% static 'polls/style.css' %}" type="text/css">
   {% if LATEST_QUESTION_LIST %}
     <ul>
       {% for question in LATEST_QUESTION_LIST %}
