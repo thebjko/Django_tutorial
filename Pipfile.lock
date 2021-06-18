@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "cc926cc836a608444111ebbe5dd55508b2c3b552ab6396c62722837d4f0ec556"
+            "sha256": "9ebbb9f197ed863dbd199be86780dd372763279d7837ce7fedf81e0bdeed1ff5"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -46,6 +46,13 @@
             ],
             "index": "pypi",
             "version": "==3.2"
+        },
+        "django-polls": {
+            "hashes": [
+                "sha256:6b66be9b7824505c6fa8ab3fdeb1f1266ee2175692717ac3f10bb5ce1a552303"
+            ],
+            "path": "./django-polls/dist/django-polls-0.1.tar.gz",
+            "version": "==0.1"
         },
         "idna": {
             "hashes": [
